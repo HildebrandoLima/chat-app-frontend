@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Button({ title, onClick }) {
+function Button({ title, color, onClick }) {
+  const buttonClass = `btn btn-${color} btn-sm`;
+
   return (
-    <button onClick={onClick}>
+    <button className={buttonClass} onClick={onClick}>
       {title}
     </button>
   );

@@ -9,14 +9,15 @@ const ChatPage = () => {
   const { from, to } = useParams();
 
   const {
+    text,
+    messages,
+    users,
+    editMessage,
+    isEditing,
     setFrom,
     setTo,
-    text,
     setText,
-    messages,
-    isEditing,
     setIsEditing,
-    editMessage,
     setEditMessage,
     handleCreate,
     handleDelete,
@@ -32,8 +33,20 @@ const ChatPage = () => {
   }, [from, to, setFrom, setTo]);
 
   return (
-    <div>
+    <div className="container mt-4">
       <h1>Chat</h1>
+
+      <div className="list-group mb-4" style={{ height: '400px', overflowY: 'scroll' }}>
+        <ChatList
+          from={parseInt(from)}
+          setFrom={setFrom}
+          messages={messages}
+          users={users}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}
+        />
+      </div>
+
       <ChatFrom
         from={parseInt(from)}
         setFrom={setFrom}
@@ -43,15 +56,6 @@ const ChatPage = () => {
         setText={setText}
         handleCreate={handleCreate}
       />
-
-      <div>
-        <h2>Messages</h2>
-        <ChatList
-          messages={messages}
-          handleEdit={handleEdit}
-          handleDelete={handleDelete}
-        />
-      </div>
 
       {isEditing && (
         <Modal

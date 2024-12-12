@@ -25,7 +25,7 @@ const Users = () => {
     users,
     loading,
     error
-    };
+  };
 };
 
 export default Users;
