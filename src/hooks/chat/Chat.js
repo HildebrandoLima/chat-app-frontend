@@ -55,7 +55,7 @@ const Chat = () => {
 
   const handleEditSubmit = async () => {
     if (!editMessage || !editMessage.id || !editMessage.text) {
-      console.error('Erro: id e texto são obrigatórios para editar uma mensagem');
+      console.error('Erro: código e texto são obrigatórios para editar uma mensagem');
       return;
     }
 

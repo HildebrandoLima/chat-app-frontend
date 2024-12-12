@@ -1,17 +1,18 @@
-import React from 'react';
-import useChat from '../../hooks/chat/Chat';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Chat from '../../hooks/chat/Chat';
 import ChatFrom from '../../components/chat/ChatFrom';
 import ChatList from '../../components/chat/ChatList';
 import Modal from '../../components/shared/Modal';
 
 const ChatPage = () => {
+  const { from, to } = useParams();
+
   const {
-    from,
     setFrom,
+    setTo,
     text,
     setText,
-    to,
-    setTo,
     messages,
     isEditing,
     setIsEditing,
@@ -21,15 +22,22 @@ const ChatPage = () => {
     handleDelete,
     handleEdit,
     handleEditSubmit,
-  } = useChat();
+  } = Chat();
+
+  useEffect(() => {
+    if (from && to) {
+      setFrom(parseInt(from));
+      setTo(parseInt(to));
+    }
+  }, [from, to, setFrom, setTo]);
 
   return (
     <div>
       <h1>Chat</h1>
       <ChatFrom
-        from={from}
+        from={parseInt(from)}
         setFrom={setFrom}
-        to={to}
+        to={parseInt(to)}
         setTo={setTo}
         text={text}
         setText={setText}

@@ -25,9 +25,7 @@ const UserPage = () => {
             <ul key={user.id}>
                 {user.friends.map((friend) => (
                 <li key={friend.id}>
-                    <a href={`/chat/${user.id}/${friend.id}`}>
-                    {friend.name}
-                    </a>
+                    <a href={`/chat/${user.id}/${friend.id}`}>{friend.name}</a>
                 </li>
                 ))}
             </ul>
