@@ -1,11 +1,17 @@
-import './App.css';
-import ChatPage from './pages/chat/ChatPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { routes } from './config/routes';
 
 function App() {
   return (
-    <div>
-      <ChatPage />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.component} />
+            ))}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
