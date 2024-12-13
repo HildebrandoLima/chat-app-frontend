@@ -20,8 +20,7 @@ const ChatFrom = ({ from, setFrom, to, setTo, text, setText, handleCreate }) => 
         placeholder="Digite sua mensagem..."
         value={text}
         onChange={(e) => setText(e.target.value)}
-        className="form-control me-2"
-        style={{ width: '80%' }}
+        className="form-control me-2 form-input"
         required
       />
 

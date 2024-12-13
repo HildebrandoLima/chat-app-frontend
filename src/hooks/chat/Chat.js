@@ -6,6 +6,8 @@ const Chat = () => {
   const [from, setFrom] = useState(0);
   const [text, setText] = useState('');
   const [to, setTo] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [messages, setMessages] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editMessage, setEditMessage] = useState(null);
@@ -14,8 +16,14 @@ const Chat = () => {
     const disconnectPusher = configurePusher(from, to, setMessages);
 
     const fetchMessages = async () => {
-      const data = await ChatService.getMessages(from, to);
-      setMessages(data);
+      try {
+        const data = await ChatService.getMessages(from, to);
+        setMessages(data);
+      } catch (error) {
+        setError('Erro ao carregar amigos');
+      } finally {
+        setLoading(false);
+      }
     };
 
     if (to && from) {
@@ -48,7 +56,6 @@ const Chat = () => {
   };
 
   const handleEdit = async (id) => {
-    console.log('Chamando handleEdit com ID:', id);
     const data = await ChatService.getMessage(id);
     setEditMessage(data);
     setIsEditing(true);
@@ -77,6 +84,8 @@ const Chat = () => {
     to,
     text,
     messages,
+    loading,
+    error,
     isEditing,
     editMessage,
     setFrom,

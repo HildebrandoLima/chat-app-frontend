@@ -1,0 +1,41 @@
+.app-component-upper {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.app-component-lower {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.modal-component {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.chat-component {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.chat-component-message-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.user-component-margin {
+   width: 50px;
+   height: 50px;
+   margin-right: 15px;
+}
+
+.user-component-link {
+    text-decoration: none;
+}

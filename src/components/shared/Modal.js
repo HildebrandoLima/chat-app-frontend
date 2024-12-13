@@ -5,7 +5,7 @@ const Modal = ({ isEditing, editMessage, setIsEditing, setEditMessage, handleEdi
   if (!isEditing) return null;
 
   return (
-    <div className="modal fade show" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }} tabIndex="-1" aria-hidden="true">
+    <div className="modal fade show modal-component" tabIndex="-1" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
