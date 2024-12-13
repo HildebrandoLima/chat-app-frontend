@@ -15,7 +15,7 @@ const Modal = ({ isEditing, editMessage, setIsEditing, setEditMessage, handleEdi
 
           <div className="modal-body">
             <textarea
-              value={editMessage.text}
+              value={editMessage ? editMessage.text : ''}
               onChange={(e) => setEditMessage({ ...editMessage, text: e.target.value })}
               className="form-control"
               rows="4"
@@ -24,7 +24,7 @@ const Modal = ({ isEditing, editMessage, setIsEditing, setEditMessage, handleEdi
 
           <div className="modal-footer">
             <Button title="Salvar" color="primary" onClick={handleEditSubmit} />
-            <Button title="Cancelar" color="secondary" onClick={() => setIsEditing(false)} />
+            <Button title="Cancelar" color="secondary" onClick={() => { setIsEditing(false); setEditMessage(null); }} />
           </div>
         </div>
       </div>

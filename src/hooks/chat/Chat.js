@@ -7,7 +7,6 @@ const Chat = () => {
   const [text, setText] = useState('');
   const [to, setTo] = useState(0);
   const [messages, setMessages] = useState([]);
-  const [users, setUsers] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editMessage, setEditMessage] = useState(null);
 
@@ -16,8 +15,7 @@ const Chat = () => {
 
     const fetchMessages = async () => {
       const data = await ChatService.getMessages(from, to);
-      setUsers(data.users);
-      setMessages(data.messages);
+      setMessages(data);
     };
 
     if (to && from) {
@@ -50,8 +48,9 @@ const Chat = () => {
   };
 
   const handleEdit = async (id) => {
-    const response = await ChatService.getMessage(id);
-    setEditMessage(response);
+    console.log('Chamando handleEdit com ID:', id);
+    const data = await ChatService.getMessage(id);
+    setEditMessage(data);
     setIsEditing(true);
   };
 
@@ -78,7 +77,6 @@ const Chat = () => {
     to,
     text,
     messages,
-    users,
     isEditing,
     editMessage,
     setFrom,

@@ -11,7 +11,6 @@ const ChatPage = () => {
   const {
     text,
     messages,
-    users,
     editMessage,
     isEditing,
     setFrom,
@@ -41,7 +40,6 @@ const ChatPage = () => {
           from={parseInt(from)}
           setFrom={setFrom}
           messages={messages}
-          users={users}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
         />
