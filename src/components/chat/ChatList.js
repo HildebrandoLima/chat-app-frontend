@@ -23,11 +23,8 @@ const ChatList = ({ from, messages, handleEdit, handleDelete }) => {
                   }`}
                 >
                   <span className={`chat-component-message-text ${isSender ? 'text-end mx-2' : ''}`}>
-                    {message.status === "Mensagem Apagada" ? message.status : message.text}
+                    {message.status === "Mensagem Apagada" ? message.status : message.text}  {FormatTime(message.createdAt)}
                   </span>
-                  <small className={`me-3 mx-2 ${isSender ? 'text-end mx-2' : ''}`}>
-                    {FormatTime(message.createdAt)}
-                  </small>
                 </div>
 
                   <div className="d-flex align-items-center">

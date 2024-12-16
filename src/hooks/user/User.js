@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import UserService from '../../services/UserSerivice';
 
-const Users = () => {
+const User = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,4 +28,4 @@ const Users = () => {
   };
 };
 
-export default Users;
+export default User;

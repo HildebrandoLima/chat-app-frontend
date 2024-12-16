@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -14,7 +15,9 @@ function Header() {
 
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Tema</a></li>
-                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li>
+                    <Link to={`/perfil`} className="dropdown-item">Perfil</Link>
+                </li>
             </ul>
         </div>
     </div>
