@@ -1,10 +1,10 @@
 import React from 'react';
 import ChatPage from '../pages/chat/ChatPage';
-import ChatCreatePage from '../pages/chat/ChatCreatePage';
-import ChatUpdatePage from '../pages/chat/ChatUpdatePage';
+import UserPage from '../pages/user/UserPage';
+import UserUpdatePage from '../pages/user/UserUpdatePage';
 
 export const routes = [
-  { path: '/', component: <ChatPage /> },
-  { path: '/registrar', component: <ChatCreatePage /> },
-  { path: '/alterar/:id', component: <ChatUpdatePage /> },
+  { path: '/', component: <UserPage /> },
+  { path: '/perfil', component: <UserUpdatePage /> },
+  { path: '/chat/:from/:to', component: <ChatPage /> },
 ];
