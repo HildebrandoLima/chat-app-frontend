@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../shared/Button';
 
 const Modal = ({ isEditing, editMessage, setIsEditing, setEditMessage, handleEditSubmit }) => {
   if (!isEditing) return null;

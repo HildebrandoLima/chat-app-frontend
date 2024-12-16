@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Chat from '../../hooks/chat/Chat';
 import ChatFrom from '../../components/chat/ChatFrom';
 import ChatList from '../../components/chat/ChatList';
-import Modal from '../../components/shared/Modal';
+import Modal from '../../components/chat/Modal';
 import Header from '../../components/shared/Header';
 import Spinner from '../../components/shared/Spinner';
 
