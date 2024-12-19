@@ -1,5 +1,4 @@
-import React from 'react';
-import Button from './Button';
+import { React, Button } from '../../config/imports';
 
 const Modal = ({ isEditing, editMessage, setIsEditing, setEditMessage, handleEditSubmit }) => {
   if (!isEditing) return null;

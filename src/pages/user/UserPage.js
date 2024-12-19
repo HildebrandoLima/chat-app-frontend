@@ -1,8 +1,4 @@
-import React from 'react';
-import User from '../../hooks/user/User';
-import Header from '../../components/shared/Header';
-import UserList from '../../components/user/UserList';
-import Spinner from '../../components/shared/Spinner';
+import { React, Header, Spinner, User, UserList } from '../../config/imports';
 
 const UserPage = () => {
   const { users, loading, error } = User();

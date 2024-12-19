@@ -1,5 +1,4 @@
-import React from 'react';
-import Button from '../shared/Button';
+import { React, Button } from '../../config/imports';
 
 const ChatFrom = ({ from, setFrom, to, setTo, text, setText, handleCreate }) => {
   return (

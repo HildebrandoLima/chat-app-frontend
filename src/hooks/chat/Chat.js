@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import configurePusher from '../../config/pusher';
-import ChatService from '../../services/ChatService';
+import { useState, useEffect, pusher, ChatService } from '../../config/imports';
 
 const Chat = () => {
   const [from, setFrom] = useState(0);
@@ -13,7 +11,7 @@ const Chat = () => {
   const [editMessage, setEditMessage] = useState(null);
 
   useEffect(() => {
-    const disconnectPusher = configurePusher(from, to, setMessages);
+    const disconnectPusher = pusher(from, to, setMessages);
 
     const fetchMessages = async () => {
       try {

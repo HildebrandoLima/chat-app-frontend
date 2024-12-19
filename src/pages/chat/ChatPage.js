@@ -1,11 +1,4 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Chat from '../../hooks/chat/Chat';
-import ChatFrom from '../../components/chat/ChatFrom';
-import ChatList from '../../components/chat/ChatList';
-import Modal from '../../components/shared/Modal';
-import Header from '../../components/shared/Header';
-import Spinner from '../../components/shared/Spinner';
+import { React, useEffect, useParams, Header, ChatFrom, Modal, Spinner, Chat, ChatList } from '../../config/imports';
 
 const ChatPage = () => {
   const { from, to } = useParams();

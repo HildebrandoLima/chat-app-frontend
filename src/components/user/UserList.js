@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import FormatTime from '../../utils/formatTime/FormatTime';
+import { React, Link, FormatTime } from '../../config/imports';
 
 const UserList = ({ users }) => {
   return (

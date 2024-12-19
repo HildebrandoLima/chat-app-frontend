@@ -1,5 +1,4 @@
-import React from 'react';
-import Button from '../shared/Button';
+import { React, Button } from '../../config/imports';
 
 const UserForm = ({ user, handleChange, handleSubmit, isEdit }) => {
   return (

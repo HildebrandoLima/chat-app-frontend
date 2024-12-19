@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import UserService from '../services/UserService';
-import UserForm from './UserForm';
+import { React, useState, useNavigate, UserService, UserForm } from '../../config/imports';
 
 const UserCreate = () => {
   const navigate = useNavigate();
-  const [error, setError] = useState(null); // Para lidar com erros
+  const [error, setError] = useState(null);
 
   const handleCreate = async (formData) => {
     try {
-      await UserService.postUser(formData); // Cria o novo usuário
-      navigate('/'); // Redireciona para a página inicial ou onde preferir
+      await UserService.postUser(formData);
+      navigate('/');
     } catch (error) {
       console.error('Erro ao criar o usuário:', error);
       setError('Erro ao salvar o usuário');

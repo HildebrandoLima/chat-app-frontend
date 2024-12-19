@@ -1,7 +1,4 @@
-import React from 'react';
-import Header from '../../components/shared/Header';
-import UserForm from '../../components/user/UserForm';
-import UserUpdate from '../../hooks/user/UserUpdate';
+import { React, Header, UserForm, UserUpdate } from '../../config/imports';
 
 const UserUpdatePage = () => {
   const { user, isEdit, handleChange, handleSubmit } = UserUpdate();

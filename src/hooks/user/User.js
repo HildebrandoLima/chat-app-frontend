@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import UserService from '../../services/UserSerivice';
+import { useState, useEffect, UserService } from '../../config/imports';
 
 const User = () => {
   const [users, setUsers] = useState([]);

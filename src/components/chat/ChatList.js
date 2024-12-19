@@ -1,6 +1,4 @@
-import React from 'react';
-import Button from '../shared/Button';
-import FormatTime from '../../utils/formatTime/FormatTime';
+import { React, Button, FormatTime } from '../../config/imports';
 
 const ChatList = ({ from, messages, handleEdit, handleDelete }) => {
   return (

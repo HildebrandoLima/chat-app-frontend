@@ -1,4 +1,4 @@
-import UserRepository from '../repositories/UserRepository';
+import { UserRepository } from '../config/imports';
 
 const UserService = {
   getUsers: async (from, to) => {

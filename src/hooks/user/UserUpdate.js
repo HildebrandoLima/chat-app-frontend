@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import UserService from '../../services/UserSerivice'; 
+import { useState, useEffect, useNavigate, UserService } from '../../config/imports';
 
 const UserUpdate = () => {
   const navigate = useNavigate();

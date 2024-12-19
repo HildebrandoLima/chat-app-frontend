@@ -1,4 +1,4 @@
-import ChatRepository from '../repositories/ChatRepository';
+import { ChatRepository } from '../config/imports';
 
 const ChatService = {
   getMessages: async (from, to) => {

@@ -1,4 +1,4 @@
-import api from '../config/api';
+import { api } from '../config/imports';
 
 const UserRepository = {
   getUsers: async (from, to) => await api.get(`users?from=${from}&to=${to}`),

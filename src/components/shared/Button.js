@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from '../../config/imports';
 
 function Button({ title, color, onClick }) {
   const buttonClass = `btn btn-${color} btn-sm`;
