@@ -9,22 +9,22 @@ const UserPage = () => {
 
   if (loading) {
     return (
-      <div>
+      <>
         <Spinner />
-      </div>
+      </>
     );
   }
 
   if (error) {
-    return <div>{error}</div>;
+    return <>{error}</>;
   }
 
   return (
-    <div>
+    <>
       <Header />
 
       <UserList users={users} />
-    </div>
+    </>
   );
 };
 

@@ -5,9 +5,7 @@ import UserService from '../../services/UserSerivice';
 const UserUpdate = () => {
   const navigate = useNavigate();
   const { userId } = 1;
-
   const [user, setUser] = useState({ name: '', email: '', password: '' });
-  const [error, setError] = useState(null);
   const [isEdit, setIsEdit] = useState(false);
 
   useEffect(() => {
@@ -19,7 +17,6 @@ const UserUpdate = () => {
           setIsEdit(true);
         } catch (error) {
           console.error('Erro ao carregar o usuário:', error);
-          setError('Erro ao carregar os dados do usuário');
         }
       };
 
@@ -49,13 +46,11 @@ const UserUpdate = () => {
       navigate('/');
     } catch (error) {
       console.error('Erro ao salvar o usuário:', error);
-      setError('Erro ao salvar o usuário');
     }
   };
 
   return {
     user,
-    error,
     isEdit,
     handleChange,
     handleSubmit,
